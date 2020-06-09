@@ -9,7 +9,9 @@ var date = d.getFullYear();
 
 ReactDOM.render(
   <div>
-    <h2>Created by {fname + " " + lname}</h2>
+    <h2 className="Head" contentEditable="true" spellCheck="false">
+      Created by {fname + " " + lname}
+    </h2>
     <p>copyrights {date}</p>
   </div>,
   document.getElementById("root")
