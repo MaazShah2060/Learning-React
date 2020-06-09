@@ -1,0 +1,12 @@
+.head{
+color: red
+}
+p{
+color: blue
+}
+.image{
+height: 100px;
+width: 200px;
+margin: 15px;
+display: block
+}
