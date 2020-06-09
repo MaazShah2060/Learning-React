@@ -9,8 +9,8 @@ var date = d.getFullYear();
 
 ReactDOM.render(
   <div>
-    <h2 className="Head" contentEditable="true" spellCheck="false">
-      Created by {fname + " " + lname}
+    <h2 className="head" contentEditable="true" spellCheck="false">
+      Created by {fname} {lname}
     </h2>
     <p>copyrights {date}</p>
   </div>,
