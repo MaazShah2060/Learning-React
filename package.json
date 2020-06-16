@@ -1,12 +1,13 @@
 {
-  "name": "introduction-to-jsx",
+  "name": "react-props-practice",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
-    "react": "16.11.0",
-    "react-dom": "16.11.0"
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-scripts": "3.2.0"
   },
   "devDependencies": {
     "typescript": "3.3.3"
