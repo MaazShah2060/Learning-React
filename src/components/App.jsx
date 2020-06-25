@@ -1,19 +1,22 @@
 import React from "react";
-import Avatar from './Avatar';
 
 function App(props) {
   return (
-        <div className="card">
-          <div className="top">
-          <p>{props.id}</p>
-            <h2 className="name">{props.name}</h2>
-            <Avatar img={props.img} />
-          </div>
-          <div className="bottom">
-            <p>{props.tel}</p>
-            <p className="info">{props.email}</p>
-          </div>
+    <div>
+      <dl className="dictionary">
+        <div className="term">
+          <dt>
+            <span className="emoji" role="img" aria-label={props.name}>
+              {props.emoji}
+            </span>
+            <span>{props.name}</span>
+          </dt>
+          <dd>
+            {props.meaning}
+          </dd>
         </div>
+      </dl>
+    </div>
   );
 }
 
