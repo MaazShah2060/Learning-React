@@ -2,27 +2,18 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/App";
 import contacts from "./contacts";
+function createContact(contacts){
+  return <App
+      name={contacts.name}
+      img={contacts.imgURL}
+      tel={contacts.phone}
+      email={contacts.email}
+    />
+}
 ReactDOM.render(
   <div>
     <h1 className="heading">My Contacts</h1>
-    <App
-      name={contacts[0].name}
-      img={contacts[0].imgURL}
-      tel={contacts[0].phone}
-      email={contacts[0].email}
-    />
-    <App
-      name={contacts[1].name}
-      img={contacts[1].imgURL}
-      tel={contacts[1].phone}
-      email={contacts[1].email}
-    />
-    <App
-      name={contacts[2].name}
-      img={contacts[2].imgURL}
-      tel={contacts[2].phone}
-      email={contacts[2].email}
-    />
+    {contacts.map(createContact)}
   </div>,
   document.getElementById("root")
 );
