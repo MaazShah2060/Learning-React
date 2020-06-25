@@ -4,6 +4,8 @@ import App from "./components/App";
 import contacts from "./contacts";
 function createContact(contacts){
   return <App
+      key={contacts.id}
+      id={contacts.id}
       name={contacts.name}
       img={contacts.imgURL}
       tel={contacts.phone}
