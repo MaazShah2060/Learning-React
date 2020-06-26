@@ -8,7 +8,7 @@ function emoji(emojipedia){
   id={emojipedia.id}
   name={emojipedia.name}
   emoji={emojipedia.emoji}
-  meaning={emojipedia.meaning}
+  meaning={emojipedia.meaning.substring(0,100)}
   />
 }
 ReactDOM.render( 
