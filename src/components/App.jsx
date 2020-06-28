@@ -1,22 +1,12 @@
 import React from "react";
+import Login from "./Login";
+import Register from "./Register";
 
-function App(props) {
+var registered = false;
+
+function App() {
   return (
-    <div>
-      <dl className="dictionary">
-        <div className="term">
-          <dt>
-            <span className="emoji" role="img" aria-label={props.name}>
-              {props.emoji}
-            </span>
-            <span>{props.name}</span>
-          </dt>
-          <dd>
-            {props.meaning}
-          </dd>
-        </div>
-      </dl>
-    </div>
+    <div className="container">{registered ? <Login /> : <Register />}</div>
   );
 }
 
