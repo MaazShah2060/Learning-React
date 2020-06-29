@@ -1,13 +1,15 @@
 import React from "react";
-import Login from "./Login";
-import Register from "./Register";
+import Form from "./Form";
 
-var registered = false;
+var userIsRegistered = false;
 
 function App() {
   return (
-    <div className="container">{registered ? <Login /> : <Register />}</div>
+    <div className="container">
+      <Form />
+    </div>
   );
 }
 
 export default App;
+export {userIsRegistered};
