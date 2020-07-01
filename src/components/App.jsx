@@ -1,31 +1,17 @@
 import React, { useState } from "react";
 
-function App() {
-  const [count, setCount] = useState(0);
-
-  function increase() {
-    setCount(count + 1);
-  }
-  function decrease() {
-    setCount(count - 1);
-  }
-  function reset() {
-    setCount(count - count);
-  }
+function App() {  
+  var set = new Date();
+var [time,setTime] = useState(set.getHours() + ":" + set.getMinutes() + ":" + set.getSeconds());
+function fetchTime(){
+  setTime(time = new Date().getHours() + ":" + new Date().getMinutes() + ":" + new Date().getSeconds());
+  setInterval(fetchTime, 1000);
+}
   return (
     <div className="container">
-      <h1>{count}</h1>
-      <button className="remove" onClick={decrease}>
-        -
-      </button>
-      <button className="add" onClick={increase}>
-        +
-      </button>
-      <button className="delete" onClick={reset}>
-        x
-      </button>
+      <h1>{time}</h1>
+      <button onClick={fetchTime}>Get Time</button>
     </div>
   );
 }
-
 export default App;
