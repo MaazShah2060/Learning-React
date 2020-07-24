@@ -1,38 +1,30 @@
 import React, { useState } from "react";
-
+import Heading from "./Heading";
+import List from "./List";
+import Button from "./Button";
 function App() {
-  const [item,updateitem] = useState("");
-  const [allitem,setallitem] = useState([]);
-  function handleChange(event){
-    const newitem = event.target.value;
-    updateitem(newitem);
+  const [inputText, setInputText] = useState("");
+  const [items, setItems] = useState([]);
+
+  function handleChange(event) {
+    const newValue = event.target.value;
+    setInputText(newValue);
   }
-  function insertItem (){
-    setallitem(prevalue => {
-      return [...prevalue,item];
+  function addItem() {
+    setItems(prevItems => {
+      return [...prevItems, inputText];
     });
-    updateitem("");
+    setInputText("");
   }
   return (
     <div className="container">
-      <div className="heading">
-        <h1>To-Do List</h1>
-      </div>
+      <Heading />
       <div className="form">
-        <input onChange={handleChange} type="text" value={item} />
-        <button>
-          <span onClick={insertItem}>Add</span>
-        </button>
+        <input onChange={handleChange} type="text" value={inputText} />
+        <Button add = {addItem}/>
       </div>
-      <div>
-        <ul>
-          {allitem.map(final => {
-            return <li>{final}</li>
-          })}
-        </ul>
-      </div>
+      <List item={items}/>
     </div>
   );
 }
-
 export default App;
