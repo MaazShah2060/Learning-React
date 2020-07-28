@@ -23,7 +23,13 @@ function App() {
         <input onChange={handleChange} type="text" value={inputText} />
         <Button add = {addItem}/>
       </div>
-      <List item={items}/>
+      <div>
+        <ul>
+          {items.map(todoItem => (
+            <List li={todoItem} />
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
